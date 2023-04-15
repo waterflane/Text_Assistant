@@ -22,15 +22,18 @@ while i < 5:
     timer.append(int(input()))
     if result == timer[i]:
         Win = True
-    else:
-        win = False
+    elif result != timer[i]:
+        Win = False
         i = 9
     finish = datetime.now()
     time.append(finish - start)
     print(f'Время: {finish - start}')
     i = i + 1
+    
 if Win == True:
     Time = time[0] + time[1] + time[2] + time[3] + time[4]
     Time = Time / 5
     print(f'Ваш средний результат: {Time}')
+if Win == False:
+    print('Вы проиграли!')
     
